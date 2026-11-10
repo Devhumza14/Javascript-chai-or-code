@@ -31,4 +31,7 @@ console.log(url.replace("%20", "-" ))
 console.log(url.includes("smhumza"))
 
 
-let paragrap
+let paragraph = "i am a good boy"
+console.log(paragraph.split(" "))  // changes into arraya based on the pattern we give
+// console.log(paragraph.bold()) it make bold but not used 
+console.log(paragraph.endsWith("y"))
