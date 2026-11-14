@@ -34,3 +34,17 @@ console.log(Object.values(fbUser))
 console.log(Object.entries(fbUser))
 
 console.log(fbUser.hasOwnProperty("name"));
+
+
+const course = {
+    "coursename": "JS in Urdu",
+    "courseinstructor": "hitest",
+    "course price":"999"
+
+}
+
+course["course instructor"]
+
+const {courseinstructor: instructure} = course 
+console.log(instructure)
+

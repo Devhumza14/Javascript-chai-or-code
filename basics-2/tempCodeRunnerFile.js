@@ -1,1 +1,1 @@
-Object.freeze(objJS) 
+coursename
