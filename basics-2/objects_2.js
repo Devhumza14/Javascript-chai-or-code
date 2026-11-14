@@ -48,3 +48,4 @@ course["course instructor"]
 const {courseinstructor: instructure} = course 
 console.log(instructure)
 
+// end of objects
