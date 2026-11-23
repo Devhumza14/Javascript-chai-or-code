@@ -10,3 +10,4 @@ for (const key in myObj) {
     console.log(`${myObj[key]} key is ${key}`)
     
 }
+
