@@ -1,0 +1,63 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 40px auto 20px auto;
+}
+
+/* Forces the h1 to stay on its own full line above the buttons */
+.canvas h1 {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  margin: 8px;
+  cursor: pointer;
+}
+
+/* Button Colors matching your exact HTML IDs */
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#black {
+  background-color: black;
+}
+
+#orange {
+  background-color: orange;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.jello {
+  font-size: 18px;
+}
