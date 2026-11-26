@@ -1,63 +1,108 @@
+/* Reset & Base Styles */
 * {
-  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.canvas {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin: 40px auto 20px auto;
+  background-color: #f4f6f9;
+  transition: background-color 0.4s ease-in-out;
+  padding: 20px;
 }
 
-/* Forces the h1 to stay on its own full line above the buttons */
-.canvas h1 {
+/* Frosted Glass Container for Top & Bottom Sections */
+.canvas,
+.content {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   width: 100%;
-  margin-bottom: 25px;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Top Section */
+.canvas {
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 20px 20px 0 0;
+  border-bottom: none;
+}
+
+.canvas h1 {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+/* Color Swatch Buttons */
 .button {
-  width: 80px;
-  height: 80px;
-  border: 2px solid black;
-  margin: 8px;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin: 0 8px;
+  border-radius: 50%;
   cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
 }
 
-/* Button Colors matching your exact HTML IDs */
+.button:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Individual Swatch Colors */
 #green {
-  background-color: green;
+  background-color: #10b981;
 }
 
 #blue {
-  background-color: blue;
+  background-color: #3b82f6;
 }
 
 #yellow {
-  background-color: yellow;
+  background-color: #f59e0b;
 }
 
 #black {
-  background-color: black;
+  background-color: #1e293b;
 }
 
 #orange {
-  background-color: orange;
+  background-color: #f97316;
 }
 
+/* Bottom Instruction Section */
 .content {
-  margin-top: 20px;
+  padding: 1.5rem 2rem 2.5rem;
+  border-radius: 0 0 20px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.content h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
 }
 
 .jello {
-  font-size: 18px;
+  display: inline-block;
+  font-size: 0.95rem;
+  color: #64748b;
 }
