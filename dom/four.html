@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121 ; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+
+
+</body>
+
+<script>
+
+    // create element 
+    function addLangage (langname) {
+       const li= document.createElement("li");
+       li.innerHTML = `${langname}`;
+       document.body.querySelector(".language").appendChild(li);
+        
+        // releitvely unoptimised approach cause of inner html use it traverse the whole tree of document
+    }
+
+
+
+    addLangage("python")
+    addLangage("C++")
+    addLangage("Typescript")
+
+    // optimized approach 
+    function addoptilanguage (langname){
+       const li =  document.createElement("li");
+       li.appendChild(document.createTextNode(langname))
+       document.querySelector(".language").appendChild(li)
+
+
+    }
+
+    addoptilanguage("golang")
+
+    // edit element 
+    const lastlanguage = document.querySelector("li:nth-child(5)")
+    // console.log(lastlanguage)
+    const newbawa = document.createElement("li")
+    newbawa.textContent = "mojo"
+    lastlanguage.replaceWith(newbawa)
+
+    const firstlireplace = document.querySelector("li:nth-child(1)")
+    const firstnew = document.createElement("li")
+    firstnew.textContent = "Typescript"
+    firstlireplace.replaceWith(firstnew)
+    
+    // remove
+
+    const removal = document.querySelector("li:last-child")
+    removal.remove()
+
+    document.createElement("li")
+    
+
+    function addol(list){
+        const item = document.createElement("li")
+        item.appendChild(document.createTextNode(list))
+        
+        const here = document.querySelector(".language")
+        here.appendChild(item)
+
+    }
+    addol("")
+     
+</script>
+
+</html>
